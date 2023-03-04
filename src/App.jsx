@@ -46,7 +46,7 @@ function App() {
 
 	return (
 		<>
-			<div className="h-screen bg-gray-700">
+			<div className="sm:h-full md:h-screen bg-gray-700">
 				<nav className="bg-gray-800">
 					<h1 className="text-4xl font-bold text-indigo-500 text-center py-2">
 						Guess the Number
@@ -64,16 +64,16 @@ function App() {
 						correctly every time!
 					</p>
 				</div>
-				<main className="flex gap-2 justify-center mt-10">
+				<main className="flex gap-2 justify-center  mt-10">
 					<form
 						onSubmit={(e) => e.preventDefault()}
-						className="flex flex-wrap gap-3"
+						className="flex flex-wrap gap-3 items-center text-center justify-center"
 					>
 						{cardsData.map(
 							({ numbers, cardNumber, id, isChecked }) => {
 								return (
 									<label
-										className={`rounded-md  text-gray-100 flex flex-wrap gap-6 font-bold text-lg w-48 h-full px-4 py-2 cursor-pointer  ${
+										className={`rounded-md  text-gray-100 flex flex-wrap gap-6 font-bold text-lg w-48 h-56 px-4 py-8 cursor-pointer  ${
 											isChecked === true
 												? "bg-green-700 hover:bg-green-800"
 												: "bg-gray-900 hover:bg-gray-800"

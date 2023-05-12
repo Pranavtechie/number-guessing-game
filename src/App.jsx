@@ -67,13 +67,14 @@ function App() {
 				<main className="flex gap-2 justify-center  mt-10">
 					<form
 						onSubmit={(e) => e.preventDefault()}
-						className="flex flex-wrap gap-3 items-center text-center justify-center"
+						className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 px-10 grid-cols-1"
 					>
 						{cardsData.map(
 							({ numbers, cardNumber, id, isChecked }) => {
 								return (
 									<label
-										className={`rounded-md  text-gray-100 flex flex-wrap gap-6 font-bold text-lg w-48 h-56 px-4 py-8 cursor-pointer  ${
+										className={`rounded-md  text-gray-100 
+										max-w-[200px] flex flex-wrap gap-6 font-bold text-lg px-4 py-8 cursor-pointer text-center ${
 											isChecked === true
 												? "bg-green-700 hover:bg-green-800"
 												: "bg-gray-900 hover:bg-gray-800"
